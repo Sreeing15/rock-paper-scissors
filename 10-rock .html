@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Rock-paper-scissors</title>
+        <style>
+          body{
+            background-color: rgb(255, 234, 0);
+            color:black;
+            font-family: Arial;
+          }
+          .heading{
+            font-size: 30px;
+            font-weight: bold;
+            margin-top: 15px;
+          }
+          .move-icon{
+            height: 50px;
+            
+          }
+          .move-button{
+            width: 120px;
+            height: 120px;
+            border-radius: 60px;
+            border: 3px solid black;
+            background-color: rgb(255, 234, 0);
+            margin-right: 10px;
+            cursor: pointer;
+          }
+          .result{
+            font-size:50px;
+            font-weight: bold;
+            margin-top:50px ;
+          }
+          .score{
+            margin-top: 60px;
+          }
+          .reset-score{
+            background-color: black;
+            color: white;
+            border:none;
+            font-size:15px;
+            padding: 8px 15px;
+            cursor: pointer;
+          }
+          
+          
+          
+        </style>
+    </head>
+    <body>
+      <p class="heading">Rock Paper Scissors</p>
+      <button class="move-button" onclick="
+      playGame('rock');
+      "><img src="images/rock.png" class="move-icon"></button>
+
+      <button   onclick="
+        playGame('paper');
+      " class="move-button"><img src="images/paper.png" class="move-icon"></button>
+
+
+      <button class="move-button" onclick="
+      playGame('scissors');
+      "><img src="images/scissors.png" class="move-icon"></button>
+      <p class="js-result" class="result"></p>
+      <p class="js-moves">
+      </p>
+      <p class="js-score" class="score"></p>
+
+      <button onclick="
+      score.wins=0;
+      score.losses=0;
+      score.ties=0;
+      localStorage.removeItem('score');
+      updateScore();" class="reset-score"> 
+      Reset Score
+
+      </button>
+
+
+      <script src="scripts/10-rock .js"></script>
+    </body>
+</html>
